@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Portfolio Website Multimedia 4986</title>
+    <link rel="stylesheet" href="style.css" />
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    
+    <nav>
+      <div class="navbar">
+        <div class="logo"><a href="home.html">Natz.</a></div>
+        <ul class="menu">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="aboutme.html">About me</a></li>
+        
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <div class="cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+        </ul>
+        <div class="media-icons">
+          <a href="https://www.facebook.com/nathashasang"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://github.com/natzme"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/nathasha-hettiarachchi-7263522b5/"><i class="fab fa-linkedin"></i></a>
+          <a href="https://twitter.com/00_natz"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/sugar_honey_ice_tea2do/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  <style>
+   
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    form {
+      max-width: 400px;
+      margin: auto;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+
+<body>
+  <br><br><br><br><br><br>
+
+  <h1>Type your text here</h1>
+
+    <form id="submit-to-google-sheet">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+
+    <button type="submit" class="btn" onclick="submitForm()">Submit</button>
+  </form>
+
+  <script>
+    function submitForm() {
+      
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
+
+      var formData = {
+        name: name,
+        email: email,
+        message: message
+      };
+
+  
+      console.log('Form Data:', formData);
+      alert('Form submitted successfully!');
+    }
+  </script>
+  <script src="script.js"></script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycby3nq-e1uHagcSHvkJe9TOMnp6pSRtVOVKvHg2xb5uJhZcsPGX3flQg3_hbadFDuLmX/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Portfolio Website Multimedia 4986</title>
+    <link rel="stylesheet" href="style.css" />
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+   
+    <nav>
+      <div class="navbar">
+        <div class="logo"><a href="home.html">Natz.</a></div>
+        <ul class="menu">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="aboutme.html">About me</a></li>
+   
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <div class="cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+        </ul>
+        <div class="media-icons">
+          <a href="https://www.facebook.com/nathashasang"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://github.com/natzme"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/nathasha-hettiarachchi-7263522b5/"><i class="fab fa-linkedin"></i></a>
+          <a href="https://twitter.com/00_natz"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/sugar_honey_ice_tea2do/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <section class="about" id="about">
+      <div class="content">
+        <div class="title"><span>About Me</span></div>
+        <div class="about-details">
+          <div class="left">
+            <img src="images/Nathasha_Hettiarachchi.jpg" alt="photo" />
+          </div>
+          <div class="right">
+            <div class="topic">Designing Is My Passion.</div>
+            <p>
+              As a talented publicity designer, I bring a unique blend of creativity, strategic thinking, and attention to detail to every project. With a keen eye for visual aesthetics and a passion for creating compelling designs, I excel at crafting impactful marketing materials that effectively communicate the message of clients and captivate audiences. With a strong background in graphic design and a commitment to delivering top-notch results I am the most suitable person to get your job done
+            </p>
+            <div class="button">
+              <button class="main-btn" onclick="downloadCV()" >
+                <span class="btn-icon"><i class="fas fa-download"></i></span>
+              Download CV
+            </div>
+    <script>
+        function downloadCV() {
+            var cvUrl = "NathashaCV.pdf";
+            
+            var link = document.createElement("a");
+            link.href = cvUrl ;
+            link.download = "NathashaCV.pdf";
+            
+            document.body.appendChild(link);
+            link.click();
+            
+            document.body.removeChild(link);
+        }
+    </script>
+                </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <script src="script.js"></script>
+  </body>
+</html>
